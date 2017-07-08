@@ -71,4 +71,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "site.yml"
   end
+
+  config.ssh.forward_agent = true
 end
