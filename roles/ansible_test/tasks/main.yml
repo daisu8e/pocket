@@ -1,0 +1,4 @@
+- name: Test Ansible
+  copy:
+    src: ../files/ansible-test.txt
+    dest: /home/vagrant/ansible-test.txt
