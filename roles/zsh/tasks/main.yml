@@ -28,3 +28,9 @@
   copy:
     src: ../files/.zlogout
     dest: /home/vagrant/.zlogout
+
+- name: Set zsh as default shell
+  become: yes
+  user:
+    name: vagrant
+    shell: /usr/bin/zsh
