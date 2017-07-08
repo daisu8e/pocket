@@ -3,6 +3,11 @@
     src: ../files/.vimrc
     dest: /home/vagrant/.vimrc
 
+- name: Make .vim directory
+  file:
+    state: directory
+    path: /home/vagrant/.vim
+
 - name: Copy .vim/encode_ja.vim
   copy:
     src: ../files/.vim/encode_ja.vim
