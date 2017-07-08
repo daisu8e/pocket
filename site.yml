@@ -4,3 +4,4 @@
     - ansible_test
     - vim
     - zsh
+    - tmux
