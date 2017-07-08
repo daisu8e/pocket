@@ -3,3 +3,28 @@
   apt:
     name: zsh
     state: present
+
+- name: Copy .zshenv
+  copy:
+    src: ../files/.zshenv
+    dest: /home/vagrant/.zshenv
+
+- name: Copy .zprofile
+  copy:
+    src: ../files/.zprofile
+    dest: /home/vagrant/.zprofile
+
+- name: Copy .zshrc
+  copy:
+    src: ../files/.zshrc
+    dest: /home/vagrant/.zshrc
+
+- name: Copy .zlogin
+  copy:
+    src: ../files/.zlogin
+    dest: /home/vagrant/.zlogin
+
+- name: Copy .zlogout
+  copy:
+    src: ../files/.zlogout
+    dest: /home/vagrant/.zlogout
