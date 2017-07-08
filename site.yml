@@ -1,0 +1,4 @@
+- hosts: all
+  user: vagrant
+  roles:
+    - ansible_test
