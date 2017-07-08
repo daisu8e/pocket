@@ -2,3 +2,8 @@
   copy:
     src: ../files/.vimrc
     dest: /home/vagrant/.vimrc
+
+- name: Copy .vim/encode_ja.vim
+  copy:
+    src: ../files/.vim/encode_ja.vim
+    dest: /home/vagrant/.vim/encode_ja.vim

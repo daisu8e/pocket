@@ -60,6 +60,8 @@ set tags+=~/tags
 let g:netrw_liststyle = 3
 let g:netrw_list_hide = 'CVS,\(^\|\s\s\)\zs\.\S\+'
 
+source ~/.vim/encode_ja.vim
+
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
