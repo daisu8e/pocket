@@ -2,6 +2,7 @@
   user: vagrant
   roles:
     - ansible_test
+    - timezone
     - vim
     - zsh
     - tmux
