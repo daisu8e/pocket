@@ -1,8 +1,12 @@
-- name: Install zsh
-  become: yes
-  apt:
-    name: zsh
-    state: present
+- name: Make .zsh directory
+  file:
+    state: directory
+    path: ~/.zsh
+
+- name: Make completions directory
+  file:
+    state: directory
+    path: ~/.zsh/completions
 
 - name: Copy .zshenv
   copy:
@@ -28,6 +32,12 @@
   copy:
     src: ../files/.zlogout
     dest: /home/vagrant/.zlogout
+
+- name: Install zsh
+  become: yes
+  apt:
+    name: zsh
+    state: present
 
 - name: Set zsh as default shell
   become: yes
