@@ -6,3 +6,5 @@
     - vim
     - zsh
     - tmux
+    - ruby
+    - bundler
