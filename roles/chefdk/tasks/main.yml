@@ -1,0 +1,16 @@
+- name: Make tmp chefdk directory
+  become: yes
+  file:
+    state: directory
+    path: /tmp/chefdk
+
+- name: Download chefdk package
+  become: yes
+  get_url:
+    url: https://packages.chef.io/files/stable/chefdk/2.0.26/ubuntu/16.04/chefdk_2.0.26-1_amd64.deb
+    dest: /tmp/chefdk/chefdk_2.0.26-1_amd64.deb
+
+- name: Install chefdk
+  become: yes
+  apt:
+    deb: /tmp/chefdk/chefdk_2.0.26-1_amd64.deb

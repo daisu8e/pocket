@@ -1,4 +1,4 @@
-- name: Make hub directory
+- name: Make tmp hub directory
   become: yes
   file:
     state: directory
