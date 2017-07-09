@@ -20,3 +20,23 @@
 - name: Install hub
   become: yes
   command: /tmp/hub/hub-linux-amd64-2.3.0-pre10/install
+
+- name: Make .zsh/completions directory
+  file:
+    state: directory
+    path: ~/.zsh/completions
+    recurse: yes
+
+- name: Copy hub.zsh_completion
+  copy:
+    src: /tmp/hub/hub-linux-amd64-2.3.0-pre10/etc/hub.zsh_completion
+    dest: ~/.zsh/completions/_hub
+
+- name: Set fpath
+  shell: echo 'fpath=(~/.zsh/completions $fpath)' >> ~/.zshrc
+
+- name: Set autoload
+  shell: echo 'autoload -U compinit && compinit' >> ~/.zshrc
+
+- name: Set alias
+  shell: echo 'eval "$(hub alias -s)"' >> ~/.zshrc
