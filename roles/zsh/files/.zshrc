@@ -88,7 +88,7 @@ setopt share_history        # share command history data
 
 ## Completion configuration
 #
-fpath=(${HOME}/.zsh/functions/Completion ${fpath})
+fpath=(${HOME}/.zsh/completions ${fpath})
 autoload -U compinit
 compinit
 
@@ -183,4 +183,7 @@ esac
 
 ## load user .zshrc configuration file
 #
-[ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local
+for i in ~/.zsh/*.zsh; do
+  source $i
+done
+
