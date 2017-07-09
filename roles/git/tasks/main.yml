@@ -1,0 +1,17 @@
+- name: Set user.name
+  git_config:
+    scope: global
+    name: user.name
+    value: kat2n
+
+- name: Set user.email
+  git_config:
+    scope: global
+    name: user.email
+    value: daisuke.katsumata@dragon.jp
+
+- name: Set core.editor
+  git_config:
+    scope: global
+    name: core.editor
+    value: vim
