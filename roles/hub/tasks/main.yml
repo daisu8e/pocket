@@ -1,0 +1,22 @@
+- name: Make hub directory
+  become: yes
+  file:
+    state: directory
+    path: /tmp/hub
+
+- name: Download hub binary
+  become: yes
+  get_url:
+    url: https://github.com/github/hub/releases/download/v2.3.0-pre10/hub-linux-amd64-2.3.0-pre10.tgz
+    dest: /tmp/hub/hub-linux-amd64-2.3.0-pre10.tgz
+
+- name: Unarchive hub binary
+  become: yes
+  unarchive:
+    src: /tmp/hub/hub-linux-amd64-2.3.0-pre10.tgz
+    dest: /tmp/hub
+    remote_src: yes
+
+- name: Install hub
+  become: yes
+  command: /tmp/hub/hub-linux-amd64-2.3.0-pre10/install
