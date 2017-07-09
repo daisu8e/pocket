@@ -1,3 +1,4 @@
 /.vagrant
 /projects/*
 !/projects/README.md
+/*.retry
