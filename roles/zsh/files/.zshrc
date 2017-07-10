@@ -142,16 +142,18 @@ case "${TERM}" in
         ;;
 esac
 
+## generator
+# https://geoff.greer.fm/lscolors/
 case "${TERM}" in
     xterm|xterm-color)
-        export LSCOLORS=exfxcxdxbxegedabagacad
-        export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+        export LSCOLORS=exfxcxdxbxacadabafaggx
+        export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=30;42:cd=30;43:su=30;41:sg=30;45:tw=30;46:ow=36'
         zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
         ;;
     kterm-color)
         stty erase '^H'
-        export LSCOLORS=exfxcxdxbxegedabagacad
-        export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+        export LSCOLORS=exfxcxdxbxacadabafaggx
+        export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=30;42:cd=30;43:su=30;41:sg=30;45:tw=30;46:ow=36'
         zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
         ;;
     kterm)
